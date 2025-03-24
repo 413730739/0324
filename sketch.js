@@ -37,7 +37,7 @@ function setup() {
   btnTamkang.mouseOver(() => isHoverTamkang = true); // 滑鼠移入
   btnTamkang.mouseOut(() => isHoverTamkang = false); // 滑鼠移出
 
-  // 建立 "淡江教科" 按鈕
+  // 建立 "作品簡介" 按鈕
   btnTamkangET = createButton('作品簡介');
   btnTamkangET.position(20, 120); // 按鈕位置（與上一個按鈕相隔 50）
   styleButton(btnTamkangET); // 設定按鈕樣式
@@ -46,6 +46,14 @@ function setup() {
   });
   btnTamkangET.mouseOver(() => isHoverTamkangET = true); // 滑鼠移入
   btnTamkangET.mouseOut(() => isHoverTamkangET = false); // 滑鼠移出
+
+  // 建立 "淡江教科" 按鈕
+  let btnTamkangET2 = createButton('淡江教科');
+  btnTamkangET2.position(20, 190); // 按鈕位置（與上一個按鈕相隔 70）
+  styleButton(btnTamkangET2); // 設定按鈕樣式
+  btnTamkangET2.mousePressed(() => {
+    showIframe('https://413730739.github.io/0317/');
+  });
 
   // 建立 iframe 容器
   iframeContainer = createDiv('');
@@ -77,12 +85,12 @@ function draw() {
 
   // 顯示第一個按鈕的精靈動畫
   if (isHoverTamkang) {
-    displaySprite(spriteTamkang, 18, 1867, 84, 20, 220, spriteIndexTamkang, (index) => spriteIndexTamkang = index, spriteTimerTamkang, (timer) => spriteTimerTamkang = timer);
+    displaySprite(spriteTamkang, 18, 1867, 84, 20, 320, spriteIndexTamkang, (index) => spriteIndexTamkang = index, spriteTimerTamkang, (timer) => spriteTimerTamkang = timer);
   }
 
   // 顯示第二個按鈕的精靈動畫
   if (isHoverTamkangET) {
-    displaySprite(spriteTamkangET, 14, 1003, 71, 20, 220, spriteIndexTamkangET, (index) => spriteIndexTamkangET = index, spriteTimerTamkangET, (timer) => spriteTimerTamkangET = timer);
+    displaySprite(spriteTamkangET, 14, 1003, 71, 20, 320, spriteIndexTamkangET, (index) => spriteIndexTamkangET = index, spriteTimerTamkangET, (timer) => spriteTimerTamkangET = timer);
   }
 }
 
