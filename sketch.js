@@ -50,7 +50,7 @@ function setup() {
   btnTamkang.position(20, 50); // 按鈕位置
   styleButton(btnTamkang); // 設定按鈕樣式
   btnTamkang.mousePressed(() => {
-    showIframe('https://www.tku.edu.tw/');
+    showIframe('./自我介紹.pdf'); // 使用相對路徑顯示 PDF
   });
   btnTamkang.mouseOver(() => isHoverTamkang = true); // 滑鼠移入
   btnTamkang.mouseOut(() => isHoverTamkang = false); // 滑鼠移出
